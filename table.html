@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#6b4fbb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Choose a cassette — Songs under the stars for Papa">
+  <title>Choose a Cassette — For Papa</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-table">
+
+  <canvas id="sky-canvas" aria-hidden="true"></canvas>
+
+  <div class="table-glow" aria-hidden="true"></div>
+
+  <main class="page-table-wrap" aria-label="Cassette table">
+    <div class="table-card">
+      <div class="galaxy-header">
+        <p class="scene-title">Choose a cassette, Papa</p>
+        <p class="hint-text">Drag a tape into the player below</p>
+      </div>
+
+      <div class="tape-shelf">
+        <p class="tape-shelf-label">✦ Your tapes ✦</p>
+        <div class="tape-row" id="tape-row">
+          <div class="pool-tape idle" data-id="1" id="tape-1">
+            <div class="tape-3d" style="--tape-color:#e8a4c8">
+              <div class="tape-face">
+                <div class="tape-window-mini"></div>
+              </div>
+              <div class="tape-edge"></div>
+            </div>
+          </div>
+          <div class="pool-tape idle" data-id="2" id="tape-2">
+            <div class="tape-3d" style="--tape-color:#7eb8e8">
+              <div class="tape-face">
+                <div class="tape-window-mini"></div>
+              </div>
+              <div class="tape-edge"></div>
+            </div>
+          </div>
+          <div class="pool-tape idle" data-id="3" id="tape-3">
+            <div class="tape-3d" style="--tape-color:#f5d78e">
+              <div class="tape-face">
+                <div class="tape-window-mini"></div>
+              </div>
+              <div class="tape-edge"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-zone">
+        <div class="player-unit" id="player-unit">
+          <div class="player-body" id="player-body">
+            <div class="player-top">
+              <span class="player-brand">Daughters · Mix</span>
+              <span class="player-led" id="player-led" aria-hidden="true"></span>
+            </div>
+
+            <div class="player-display">
+              <div class="display-cover-box">
+                <img id="disp-cover" src="" alt="" hidden>
+              </div>
+              <div class="display-info">
+                <p class="display-title" id="disp-title">No cassette</p>
+                <p class="display-sub" id="disp-sub">Insert a tape</p>
+              </div>
+            </div>
+
+            <div class="deck-slot empty" id="deck-slot">
+              <div class="player-cassette" id="player-cassette">
+                <div class="pc-label" id="pc-label"></div>
+                <div class="pc-window">
+                  <div class="pc-reel" id="reel-l"></div>
+                  <div class="pc-reel" id="reel-r"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="player-controls">
+              <button type="button" class="ctrl ctrl-play" id="btn-play" disabled>Play</button>
+              <button type="button" class="ctrl ctrl-pause" id="btn-pause" disabled>Pause</button>
+              <button type="button" class="ctrl ctrl-eject" id="btn-eject" disabled>Eject</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Made with love by your daughters,<br>
+    <em>Raksha and Vrinda</em> ❤️
+  </footer>
+
+  <audio id="audio" preload="auto"></audio>
+
+  <script src="sky.js"></script>
+  <script src="player.js"></script>
+</body>
+</html>
