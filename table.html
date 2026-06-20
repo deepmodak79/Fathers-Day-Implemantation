@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-  <meta name="theme-color" content="#6b4fbb">
+  <meta name="theme-color" content="#3d4a2a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="Choose a cassette — Songs under the stars for Papa">
+  <meta name="description" content="Choose a cassette — A Father's Day gift for Papa, with pride">
   <title>Choose a Cassette — For Papa</title>
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,14 @@
 <body class="page-table">
 
   <canvas id="sky-canvas" aria-hidden="true"></canvas>
+
+  <div class="army-backdrop" aria-hidden="true">
+    <span class="army-badge">With Pride</span>
+    <span class="army-corner army-corner--tl"></span>
+    <span class="army-corner army-corner--tr"></span>
+    <span class="army-corner army-corner--bl"></span>
+    <span class="army-corner army-corner--br"></span>
+  </div>
 
   <div class="table-glow" aria-hidden="true"></div>
 
@@ -31,24 +39,18 @@
         <p class="tape-shelf-label">✦ Your tapes ✦</p>
         <div class="tape-row" id="tape-row">
           <div class="pool-tape idle" data-id="1" id="tape-1">
-            <div class="tape-3d" style="--tape-color:#e8a4c8">
+            <div class="tape-3d">
               <div class="tape-face">
+                <div class="tape-photo" aria-hidden="true"></div>
                 <div class="tape-window-mini"></div>
               </div>
               <div class="tape-edge"></div>
             </div>
           </div>
           <div class="pool-tape idle" data-id="2" id="tape-2">
-            <div class="tape-3d" style="--tape-color:#7eb8e8">
+            <div class="tape-3d">
               <div class="tape-face">
-                <div class="tape-window-mini"></div>
-              </div>
-              <div class="tape-edge"></div>
-            </div>
-          </div>
-          <div class="pool-tape idle" data-id="3" id="tape-3">
-            <div class="tape-3d" style="--tape-color:#f5d78e">
-              <div class="tape-face">
+                <div class="tape-photo" aria-hidden="true"></div>
                 <div class="tape-window-mini"></div>
               </div>
               <div class="tape-edge"></div>
@@ -61,7 +63,7 @@
         <div class="player-unit" id="player-unit">
           <div class="player-body" id="player-body">
             <div class="player-top">
-              <span class="player-brand">Daughters · Mix</span>
+              <span class="player-brand">Kids · Mix</span>
               <span class="player-led" id="player-led" aria-hidden="true"></span>
             </div>
 
@@ -77,7 +79,10 @@
 
             <div class="deck-slot empty" id="deck-slot">
               <div class="player-cassette" id="player-cassette">
-                <div class="pc-label" id="pc-label"></div>
+                <div class="pc-slideshow" id="pc-slideshow" aria-hidden="true">
+                  <img class="pc-slide" id="pc-slide-a" src="" alt="" hidden>
+                  <img class="pc-slide" id="pc-slide-b" src="" alt="" hidden>
+                </div>
                 <div class="pc-window">
                   <div class="pc-reel" id="reel-l"></div>
                   <div class="pc-reel" id="reel-r"></div>
@@ -85,10 +90,17 @@
               </div>
             </div>
 
-            <div class="player-controls">
-              <button type="button" class="ctrl ctrl-play" id="btn-play" disabled>Play</button>
-              <button type="button" class="ctrl ctrl-pause" id="btn-pause" disabled>Pause</button>
-              <button type="button" class="ctrl ctrl-eject" id="btn-eject" disabled>Eject</button>
+            <div class="player-actions">
+              <div class="skip-controls" id="skip-controls" hidden>
+                <button type="button" class="ctrl ctrl-skip" id="btn-skip-10">+10s</button>
+                <button type="button" class="ctrl ctrl-skip" id="btn-skip-15">+15s</button>
+              </div>
+
+              <div class="player-controls">
+                <button type="button" class="ctrl ctrl-play" id="btn-play" disabled>Play</button>
+                <button type="button" class="ctrl ctrl-pause" id="btn-pause" disabled>Pause</button>
+                <button type="button" class="ctrl ctrl-eject" id="btn-eject" disabled>Eject</button>
+              </div>
             </div>
           </div>
         </div>
@@ -97,8 +109,8 @@
   </main>
 
   <footer class="footer">
-    Made with love by your daughters,<br>
-    <em>Raksha and Vrinda</em> ❤️
+    Made with love by your kids,<br>
+    <em>Deep and Lisa</em> ❤️
   </footer>
 
   <audio id="audio" preload="auto"></audio>

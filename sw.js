@@ -1,4 +1,4 @@
-const CACHE = 'papa-gift-v4';
+const CACHE = 'papa-gift-v10';
 const ASSETS = [
   './',
   './index.html',
@@ -7,7 +7,14 @@ const ASSETS = [
   './sky.js',
   './landing.js',
   './player.js',
-  './manifest.json'
+  './manifest.json',
+  './PAPA.jpeg',
+  './PAPA2.jpeg',
+  './papa3.jpeg',
+  './papa4.jpeg',
+  './papa5.jpeg',
+  './papa3.mp3',
+  './शुक्रिया पापा (Duet Version).mp3'
 ];
 
 self.addEventListener('install', (e) => {

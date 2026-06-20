@@ -1,11 +1,11 @@
 {
-  "name": "Songs Under the Stars — For Papa",
+  "name": "Songs for Papa — With Pride",
   "short_name": "For Papa",
-  "description": "A musical Father's Day gift from Raksha and Vrinda",
+  "description": "A musical Father's Day gift from Deep and Lisa",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0a0618",
-  "theme_color": "#6b4fbb",
+  "background_color": "#0a0e06",
+  "theme_color": "#3d4a2a",
   "orientation": "portrait-primary",
   "icons": [
     {
